@@ -10,8 +10,13 @@ async function getPosts() {
 
 const Layout = ({children}) => {
     let {posts} = use(getPosts())
-    console.log(posts)
+    
   return (
+    <>
+    <div>
+        <h2>All Posts</h2>
+        
+    </div>
     <div>
         <ul>
             {posts.map((p) => (
@@ -22,6 +27,7 @@ const Layout = ({children}) => {
         </ul>
         <div>{children}</div>
     </div>
+    </>
   )
 }
 

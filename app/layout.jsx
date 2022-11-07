@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import Navbar from './Navbar'
 import './globals.css'
 
 export default function RootLayout({ children }) {
@@ -8,7 +10,10 @@ export default function RootLayout({ children }) {
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      
+      <body>
+        <Navbar />
+        {children}</body>
     </html>
   )
 }
